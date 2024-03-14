@@ -1,21 +1,5 @@
 
 
-
--- Table name: CreditCard
--- Table structure: CreditCardID , CardType , CardNumber , ExpMonth , ExpYear , ModifiedDate
--- Types for each column: CreditCardID (int) , CardType (nvarchar) , CardNumber (nvarchar) , ExpMonth (int) , ExpYear (int) , ModifiedDate (datetime)
-
--- data sample :
-    -- CreditCardID , CardType , CardNumber , ExpMonth , ExpYear , ModifiedDate
-    -- 1 , SuperiorCard , 33332664695310 , 11 , 2006 , 2013-07-29
-    -- 2 , Distinguish , 55552127249722 , 8 , 2005 , 2013-12-05
-    -- 3 , ColonialVoi... , 77778344838353 , 7 , 2006 , 2014-01-14
-    -- 4 , ColonialVoi... , 77774915718248 , 7 , 2006 , 2013-05-20
-    -- 5 , Vista , 55557132036181 , 4 , 2007 , 2013-02-01
-    -- 6 , Distinguish , 55553635401028 , 9 , 2007 , 2014-04-10
-    -- 7 , Distinguish , 33336081193101 , 6 , 2006 , 2013-02-01
-    -- 8 , SuperiorCard , 33336081193101 , 7 , 2013-06-30
-
 -- create the table for the CreditCard for postgressql
 CREATE TABLE CreditCard (
     CreditCardID SERIAL PRIMARY KEY,
@@ -39,12 +23,6 @@ INSERT INTO CreditCard (CardType, CardNumber, ExpMonth, ExpYear, ModifiedDate) V
 
 
 
--- table name: PersonCreditCard
--- table structure: BusinessEntityID , CreditCardID , ModifiedDate
--- Types for each column: BusinessEntityID (int) , CreditCardID (int) , ModifiedDate (datetime)
-
-
--- extracting the requests that can be made to the CreditCard table
 
 
 -- simple select statements 
