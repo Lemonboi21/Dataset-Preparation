@@ -43,7 +43,7 @@ with open(csv_file_path, 'w', newline='') as file:
     writer.writerow(["Prompt", "Response", "SQL Query"])
 
     for row in data:
-        prompt = "What are the credit card informations of the user with the id of " + str(row[0]) + "?"
+        prompt = "What are the credit card informations of the card with the id of " + str(row[0]) + "?"
         response = "the credit card with the id of " + str(row[0]) + " is a " + row[1] + " with the number of " + row[2] + " and the expiration date of " + str(row[3]) + "/" + str(row[4]) + " and it was last modified on " + str(row[5])
         sql_query = "SELECT * FROM CreditCard WHERE CreditCardID = " + str(row[0])
 
