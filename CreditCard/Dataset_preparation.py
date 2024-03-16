@@ -26,10 +26,6 @@ cur.execute(sql_query)
 # fetch the data
 data = cur.fetchall()
 
-# print the data
-print("The data from the database is:")
-for row in data:
-    print(row)
 
 #--------------------------------- create the csv files ---------------------------------#
 
