@@ -37,6 +37,10 @@ cur.close()
 conn.close()
 
 # write the data to a csv file
+
+# add the header
+data.insert(0, ['CreditCardID', 'Type', 'Number', 'ExpirationMonth', 'ExpirationYear', 'LastModified'])
+
 with open('credit_card.csv', 'w', newline='') as file:
     writer = csv.writer(file)
     writer.writerows(data)
