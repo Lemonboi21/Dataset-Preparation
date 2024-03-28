@@ -48,6 +48,21 @@ with open(csv_file_path, 'w', newline='') as file:
 
         writer.writerow([full_query, prompt, response, sql_query])
 
+# create a csv file with only the responses
+
+csv_file_path = 'csv/CreditCardID_responses.csv'
+os.makedirs(os.path.dirname(csv_file_path), exist_ok=True)  # Create the directory if it doesn't exist
+
+with open(csv_file_path, 'w', newline='') as file:
+    writer = csv.writer(file)
+    writer.writerow(["Response"])
+
+    for row in data:
+        response = "The credit card with the id of " + str(row[0]) + " is a " + row[1] + " with the number of " + row[2] + " and the expiration date of " + str(row[3]) + "/" + str(row[4]) + " and it was last modified on " + str(row[5])
+        writer.writerow([response])
+
+        
+
 # get the credit card informations using the credit card number
 
 csv_file_path = 'csv/CreditCardNumber.csv'
